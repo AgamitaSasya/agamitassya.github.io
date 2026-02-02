@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agamita Sasya | Data Analyst Portfolio</title>
+    <title>Agamita Sasya | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,79 +11,88 @@
 
     <nav class="navbar">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
+    <section id="home" class="section-page split-hero">
+        <div class="hero-left">
             <span class="badge">Computer Systems Engineer</span>
-            <h1>Agamita Sasya<span>.</span></h1>
-            <p>Data Analyst Enthusiast & Founder of Rantank Studio.</p>
+            <h1>Hi there, I'm Agamita Sasya Cahyani Arista<span>.</span></h1>
+            <div class="skills-mini">
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Excel</span>
+            </div>
+        </div>
+        <div class="hero-right">
+            <h2>About Me</h2>
+            <p>Lulusan Rekayasa Sistem Komputer yang fokus pada Data Analytics. Saya senang mengubah data mentah menjadi insight melalui visualisasi dan otomatisasi. Part of <strong>Rantank Studio</strong>, tempat saya memadukan teknologi dengan seni journaling.</p>
         </div>
     </section>
 
-    <section id="about" class="container">
-        <h2 class="section-title">About Me</h2>
-        <p>Lulusan Rekayasa Sistem Komputer dengan ketertarikan mendalam pada Data Analytics. Saya menggabungkan logika engineering dengan kreativitas dalam setiap project yang saya kerjakan.</p>
-    </section>
-
-    <section id="skills" class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-wrapper">
-            <div class="skill-group">
-                <h3>Data Stack</h3>
-                <div class="compact-grid">
-                    <div class="skill-item">SQL</div>
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">Excel</div>
-                    <div class="skill-item">Tableau</div>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Engineering</h3>
-                <div class="compact-grid">
-                    <div class="skill-item">IoT</div>
-                    <div class="skill-item">Hardware</div>
-                    <div class="skill-item">Systems</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <h2 class="section-title">Featured Projects</h2>
+    <section id="projects" class="section-page container">
+        <h2 class="title-main">Featured Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <div class="project-info">
-                    <span class="category">Analytics</span>
-                    <h3>Sales Dashboard</h3>
-                    <p>Optimasi data penjualan menggunakan Excel & Power Query.</p>
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x250" alt="Project Data">
+                </div>
+                <div class="project-content">
+                    <span class="tools">Excel • Tableau</span>
+                    <h3>Sales Dashboard Analytics</h3>
+                    <p>Visualisasi data penjualan bulanan untuk mengidentifikasi tren pasar.</p>
+                    <a href="#" class="btn-github"><i class="fab fa-github"></i> View Repository</a>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-info">
-                    <span class="category">Python</span>
-                    <h3>Data Cleaning Bot</h3>
-                    <p>Automasi pembersihan data mentah untuk laporan bulanan.</p>
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x250" alt="Project Python">
+                </div>
+                <div class="project-content">
+                    <span class="tools">Python • Pandas</span>
+                    <h3>Automation Data Cleaner</h3>
+                    <p>Script otomatis pembersihan dataset besar untuk efisiensi workflow.</p>
+                    <a href="#" class="btn-github"><i class="fab fa-github"></i> View Repository</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section-page container">
+        <h2 class="title-main">From My Blog</h2>
+        <div class="blog-grid">
+            <a href="https://medium.com" class="blog-item">
+                <img src="https://via.placeholder.com/200x120" alt="Blog 1">
+                <h4>Data Storytelling 101</h4>
+            </a>
+            <a href="https://medium.com" class="blog-item">
+                <img src="https://via.placeholder.com/200x120" alt="Blog 2">
+                <h4>IoT in Daily Life</h4>
+            </a>
+            <a href="https://medium.com" class="blog-item">
+                <img src="https://via.placeholder.com/200x120" alt="Blog 3">
+                <h4>Art & Technology</h4>
+            </a>
+            <a href="https://medium.com" class="blog-item">
+                <img src="https://via.placeholder.com/200x120" alt="Blog 4">
+                <h4>Learning SQL Fast</h4>
+            </a>
         </div>
     </section>
 
     <footer id="contact">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p>Tertarik untuk berkolaborasi atau sekadar berdiskusi tentang data?</p>
+        <div class="container footer-content">
+            <h2>Let's Connect<span>.</span></h2>
+            <p>Punya ide menarik atau tawaran kolaborasi? Hubungi saya kapan saja.</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="https://wa.me/yournumber"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:email@kamu.com"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:agamita@example.com"><i class="far fa-envelope"></i></a>
             </div>
-            <p class="copyright">&copy; 2026 Agamita Sasya. Made with passion.</p>
+            <p class="copyright">&copy; 2026 Agamita Sasya. Built with ❤️</p>
         </div>
     </footer>
 
