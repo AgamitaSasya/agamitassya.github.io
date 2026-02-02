@@ -3,37 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | [Nama Kamu]</title>
+    <title>Portfolio | Agamita Sasya</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; }
-        header { background: #2c3e50; color: white; padding: 2rem; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-        .section { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
-        .badge { background: #3498db; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; margin-right: 5px; display: inline-block; }
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --accent: #58a6ff;
+            --border: #30363d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        h1 { color: #ffffff; margin: 0; font-size: 2.2rem; }
+        .subtitle { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-top: 5px; }
+
+        .section { margin-bottom: 40px; }
+        h2 { color: #ffffff; border-left: 4px solid var(--accent); padding-left: 15px; font-size: 1.4rem; margin-bottom: 20px; }
+
+        /* Skill Grid - Responsif */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover { border-color: var(--accent); }
+        .skill-card strong { color: var(--accent); display: block; margin-bottom: 5px; font-size: 1.1rem; }
+
+        /* Project Cards */
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .tag { 
+            background: rgba(88, 166, 255, 0.1); 
+            color: var(--accent); 
+            padding: 3px 12px; 
+            border-radius: 15px; 
+            font-size: 0.75rem; 
+            border: 1px solid var(--accent);
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        footer { text-align: center; font-size: 0.8rem; color: #8b949e; padding: 40px 0; border-top: 1px solid var(--border); }
+
+        /* --- MEDIA QUERIES (Ini yang bikin responsif) --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 15px; }
+            header { padding: 25px 0; }
+            .skill-grid { grid-template-columns: 1fr; } /* Jadi 1 kolom di HP */
+        }
     </style>
 </head>
 <body>
+
+<div class="container">
     <header>
-        <h1>[Nama Lengkap Kamu]</h1>
-        <p>Data Analytics Enthusiast | Computer Systems Engineering</p>
+        <h1>Agamita Sasya</h1>
+        <div class="subtitle">Computer Systems Engineer | Data Analytics Enthusiast</div>
+        <p>Lulusan Rekayasa Sistem Komputer yang berfokus pada pengolahan data menggunakan SQL, Python, dan Excel. Berpengalaman mengelola <strong>Rantank Studio</strong> dengan pendekatan kreatif.</p>
     </header>
 
-    <div class="section">
-        <h2>Tentang Saya</h2>
-        <p>Halo! Saya lulusan Sistem Komputer yang sedang fokus mendalami dunia Data Analytics. Saya memiliki minat besar dalam mengolah data mentah menjadi informasi yang bermanfaat.</p>
-    </div>
+    <section class="section">
+        <h2>Technical Skills</h2>
+        <div class="skill-grid">
+            <div class="skill-card">
+                <strong>SQL</strong>
+                <span>Data Querying & Relational Databases</span>
+            </div>
+            <div class="skill-card">
+                <strong>Python</strong>
+                <span>Data Cleaning (Pandas/NumPy)</span>
+            </div>
+            <div class="skill-card">
+                <strong>Excel</strong>
+                <span>Advanced Formulas & Data Visualization</span>
+            </div>
+            <div class="skill-card">
+                <strong>Hardware</strong>
+                <span>IoT & Computer Systems Engineering</span>
+            </div>
+        </div>
+    </section>
 
-    <div class="section">
-        <h2>Keahlian</h2>
-        <span class="badge">SQL</span>
-        <span class="badge">Python</span>
-        <span class="badge">Microsoft Excel</span>
-        <span class="badge">Data Visualization</span>
-    </div>
+    <section class="section">
+        <h2>Selected Projects</h2>
+        
+        <div class="project-card">
+            <div class="tag">Excel</div> <div class="tag">Admin</div>
+            <h3 style="margin-top: 10px; color: white;">Business Data Management</h3>
+            <p>Sistem pencatatan data efisien untuk operasional bisnis kreatif (Rantank Studio).</p>
+        </div>
 
-    <div class="section">
-        <h2>Bisnis & Kreativitas</h2>
-        <p>Founder dari <strong>Rantank Studio</strong> - Fokus pada seni dan kreativitas.</p>
-    </div>
+        <div class="project-card">
+            <div class="tag">Python</div> <div class="tag">Data Analysis</div>
+            <h3 style="margin-top: 10px; color: white;">Sales Data Automation</h3>
+            <p>Otomatisasi laporan data penjualan bulanan untuk mempercepat pengambilan keputusan.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Language & Learning</h2>
+        <p>Sedang menempuh persiapan <strong>JLPT N5</strong> (Bahasa Jepang) dan aktif memperdalam kemampuan analisis data untuk karir global.</p>
+    </section>
+
+    <footer>
+        &copy; 2026 Agamita Sasya. <br> Built with Code & Passion on GitHub Pages.
+    </footer>
+</div>
+
 </body>
 </html>
