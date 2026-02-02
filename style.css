@@ -96,79 +96,7 @@ h1 span { color: var(--accent); }
 .project-info { padding: 30px; }
 .category { color: var(--accent); font-size: 0.7rem; text-transform: uppercase; }
 
-/* ... (Gunakan kode CSS sebelumnya, lalu tambahkan/sesuaikan bagian ini) ... */
 
-.full-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-bottom: 1px solid var(--border);
-    padding: 100px 0;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-/* Blog Cards Style (Lebih Kecil) */
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.blog-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    padding: 20px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: var(--text);
-    transition: 0.3s ease;
-}
-
-.blog-card:hover {
-    border-color: var(--accent);
-    background: #1c2128;
-}
-
-.blog-card h4 {
-    color: var(--white);
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-.blog-card span {
-    font-size: 0.8rem;
-    color: var(--accent);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-/* Scroll Button */
-.btn-scroll {
-    margin-top: 30px;
-    color: var(--accent);
-    font-size: 1.5rem;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-10px);}
-    60% {transform: translateY(-5px);}
-}
-
-/* Mobile Fix */
-@media (max-width: 768px) {
-    .about-grid { grid-template-columns: 1fr; }
-    .full-page { padding: 60px 0; }
-}
 /* Footer & Social */
 footer { background: #010409; padding: 60px 20px; text-align: center; }
 .social-links { font-size: 2rem; margin: 30px 0; display: flex; justify-content: center; gap: 30px; }
