@@ -3,91 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Agamita Sasya</title>
+    <title>Portofolio | Agamita Sasya</title>
     <style>
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-main: #c9d1d9;
-            --accent: #58a6ff;
-            --border: #30363d;
+            --bg: #0b0b0b;
+            --card-bg: #141414;
+            --accent: #58a6ff; /* Warna aksen biru teknologi */
+            --text-dim: #949494;
+            --text-bright: #ffffff;
+            --border: #222;
         }
 
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-bright);
             margin: 0;
-            padding: 0;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 24px;
         }
 
+        /* Hero Section - Terinspirasi dari Behance */
         header {
-            text-align: left;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             border-bottom: 1px solid var(--border);
-            padding: 40px 0;
-            margin-bottom: 30px;
         }
 
-        h1 { color: #ffffff; margin: 0; font-size: 2.2rem; }
-        .subtitle { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-top: 5px; }
-
-        .section { margin-bottom: 40px; }
-        h2 { color: #ffffff; border-left: 4px solid var(--accent); padding-left: 15px; font-size: 1.4rem; margin-bottom: 20px; }
-
-        /* Skill Grid - Responsif */
-        .skill-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            transition: 0.3s;
-        }
-
-        .skill-card:hover { border-color: var(--accent); }
-        .skill-card strong { color: var(--accent); display: block; margin-bottom: 5px; font-size: 1.1rem; }
-
-        /* Project Cards */
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 15px;
-        }
-
-        .tag { 
-            background: rgba(88, 166, 255, 0.1); 
-            color: var(--accent); 
-            padding: 3px 12px; 
-            border-radius: 15px; 
-            font-size: 0.75rem; 
-            border: 1px solid var(--accent);
-            margin-right: 5px;
-            display: inline-block;
+        .tagline {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
             margin-bottom: 10px;
         }
 
-        footer { text-align: center; font-size: 0.8rem; color: #8b949e; padding: 40px 0; border-top: 1px solid var(--border); }
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin: 0;
+            line-height: 1.1;
+            font-weight: 800;
+        }
 
-        /* --- MEDIA QUERIES (Ini yang bikin responsif) --- */
+        .intro-text {
+            max-width: 600px;
+            color: var(--text-dim);
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        /* Section Layout */
+        .section {
+            padding: 80px 0 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        h2 { font-size: 2rem; margin: 0; }
+
+        /* Project Cards - Visual Besar */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 300px;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: scale(0.98);
+            background: #1a1a1a;
+        }
+
+        .project-category { color: var(--accent); font-size: 0.8rem; font-weight: bold; }
+        .project-card h3 { font-size: 1.8rem; margin: 10px 0; }
+
+        /* Skills Tracker - Grid Rapi */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            padding: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .skill-item strong { color: var(--accent); font-size: 1.2rem; display: block; }
+        .skill-item span { color: var(--text-dim); font-size: 0.9rem; }
+
+        footer {
+            padding: 100px 0 40px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        /* Responsivitas */
+        @media (min-width: 768px) {
+            .project-grid { grid-template-columns: 1fr 1fr; }
+        }
+
         @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .container { padding: 15px; }
-            header { padding: 25px 0; }
-            .skill-grid { grid-template-columns: 1fr; } /* Jadi 1 kolom di HP */
+            header { height: auto; padding: 60px 0; }
+            h1 { font-size: 2.8rem; }
         }
     </style>
 </head>
@@ -95,56 +141,64 @@
 
 <div class="container">
     <header>
-        <h1>Agamita Sasya</h1>
-        <div class="subtitle">Computer Systems Engineer | Data Analytics Enthusiast</div>
-        <p>Lulusan Rekayasa Sistem Komputer yang berfokus pada pengolahan data menggunakan SQL, Python, dan Excel. Berpengalaman mengelola <strong>Rantank Studio</strong> dengan pendekatan kreatif.</p>
+        <div class="tagline">Data Analyst & Systems Engineer</div>
+        <h1>Agamita Sasya.</h1>
+        <p class="intro-text">
+            Mengubah data kompleks menjadi cerita visual yang bermakna. Berbasis di Indonesia, berfokus pada SQL, Python, dan pertumbuhan bisnis kreatif.
+        </p>
     </header>
 
     <section class="section">
-        <h2>Technical Skills</h2>
-        <div class="skill-grid">
-            <div class="skill-card">
+        <div class="section-header">
+            <h2>Technical Skills</h2>
+        </div>
+        <div class="skills-container">
+            <div class="skill-item">
                 <strong>SQL</strong>
-                <span>Data Querying & Relational Databases</span>
+                <span>Database Architect & Querying</span>
             </div>
-            <div class="skill-card">
+            <div class="skill-item">
                 <strong>Python</strong>
-                <span>Data Cleaning (Pandas/NumPy)</span>
+                <span>Data Analysis & Automation</span>
             </div>
-            <div class="skill-card">
+            <div class="skill-item">
                 <strong>Excel</strong>
-                <span>Advanced Formulas & Data Visualization</span>
+                <span>Advanced Modeling & Viz</span>
             </div>
-            <div class="skill-card">
+            <div class="skill-item">
                 <strong>Hardware</strong>
-                <span>IoT & Computer Systems Engineering</span>
+                <span>IoT & Engineering Systems</span>
             </div>
         </div>
     </section>
 
     <section class="section">
-        <h2>Selected Projects</h2>
-        
-        <div class="project-card">
-            <div class="tag">Excel</div> <div class="tag">Admin</div>
-            <h3 style="margin-top: 10px; color: white;">Business Data Management</h3>
-            <p>Sistem pencatatan data efisien untuk operasional bisnis kreatif (Rantank Studio).</p>
+        <div class="section-header">
+            <h2>Selected Works</h2>
         </div>
-
-        <div class="project-card">
-            <div class="tag">Python</div> <div class="tag">Data Analysis</div>
-            <h3 style="margin-top: 10px; color: white;">Sales Data Automation</h3>
-            <p>Otomatisasi laporan data penjualan bulanan untuk mempercepat pengambilan keputusan.</p>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-category">EXCEL / ANALYTICS</div>
+                <h3>Rantank Studio Dashboard</h3>
+                <p style="color: var(--text-dim)">Visualisasi data operasional untuk mengoptimalkan bisnis kreatif.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-category">PYTHON / AUTOMATION</div>
+                <h3>Automated Sales Report</h3>
+                <p style="color: var(--text-dim)">Sistem otomatis pembersihan data transaksi skala besar.</p>
+            </div>
         </div>
     </section>
 
     <section class="section">
-        <h2>Language & Learning</h2>
-        <p>Sedang menempuh persiapan <strong>JLPT N5</strong> (Bahasa Jepang) dan aktif memperdalam kemampuan analisis data untuk karir global.</p>
+        <h2>Creative Corner</h2>
+        <p style="color: var(--text-dim); font-size: 1.2rem;">
+            Selain data, saya mendedikasikan waktu untuk seni melalui <strong>Rantank Studio</strong>, mengeksplorasi <em>junk journaling</em> dan terapi seni.
+        </p>
     </section>
 
     <footer>
-        &copy; 2026 Agamita Sasya. <br> Built with Code & Passion on GitHub Pages.
+        &copy; 2026 Agamita Sasya. <br> Let's build something meaningful together.
     </footer>
 </div>
 
